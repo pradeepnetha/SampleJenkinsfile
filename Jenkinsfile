@@ -23,4 +23,5 @@ pipeline {
 					echo "hello from stage 4"
 				}
 			}			 
-					
+}
+			
