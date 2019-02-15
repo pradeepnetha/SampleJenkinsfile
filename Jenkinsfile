@@ -1,17 +1,17 @@
 pipeline {
 	agent any {
 		stages {
-		      	stage ('one') {
+		      	stage('one') {
 				steps {	
 				echo "hello from jenkinsfile 1"
 				}	
 			}
-			stage ('two') {
+			stage('two') {
 				steps {
 					input ('doyou wany to procees')
 				}
 			}
-			stage ('three') {
+			stage('three') {
 				when {
 					not {
 						branch "feature"
