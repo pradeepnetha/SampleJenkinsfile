@@ -1,26 +1,35 @@
 pipeline {
-	agent any 
+	agent any
 		stages {
-		      	stage('one') {
-				steps {	
-				echo "hello from jenkinsfile 1"
-				}	
+			stage('one') {
+				steps {
+					echo "hello form stage1"
+				}
 			}
+
 			stage('two') {
 				steps {
-					input ('doyou wany to procees')
+					input "do you want proceed"
+					echo "hello from stage two"
 				}
 			}
+
+
 			stage('three') {
+				
 				when {
 					not {
-						branch "feature"
+						branch 'feature'
 					}
 				}
+
 				steps {
-					echo "hello from stage 4"
+					echo "hello from 3"
+				
 				}
+
+
 			}
 		}
-	
+
 }
