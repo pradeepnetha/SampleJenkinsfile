@@ -5,7 +5,7 @@ pipeline {
 				steps {
 				   
 					git url: 'https://github.com/pradeepnetha/SampleJenkinsfile'
-					echo 'mvn --verion'
+					sh 'mvn --verion'
 				
 			}
 		}
