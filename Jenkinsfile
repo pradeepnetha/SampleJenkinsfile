@@ -1,35 +1,11 @@
 pipeline {
-	agent any
+	agent any 
 		stages {
-			stage('one') {
+			stage ('build') {
 				steps {
-					echo "hello form stage1"
+				   step {
+					sh 'mvn --verion'
 				}
-			}
-
-			stage('two') {
-				steps {
-					input "do you want proceed"
-					echo "hello from stage two"
-				}
-			}
-
-
-			stage('three') {
-				
-				when {
-					not {
-						branch 'feature'
-					}
-				}
-
-				steps {
-					echo "hello from 3"
-				
-				}
-
-
 			}
 		}
-
-}
+	}
